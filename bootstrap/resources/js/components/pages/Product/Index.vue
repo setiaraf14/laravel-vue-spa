@@ -90,11 +90,15 @@ export default {
                 buku: [],
                 showModal: false,
                 dataModal: {},
+                token: localStorage.getItem('_token'),
             }
         },
 
       mounted() {
         this.fetchDataBuku()
+        // if (!this.token) {
+        //    this.$router.push({ name: 'login' }) 
+        // }
       },
 
       methods: {
@@ -109,7 +113,7 @@ export default {
             console.log(id)
             let idbuku = id
             axios.get(`/api/delete-buku/json?idbuku=${idbuku}`).then(response => {
-                let i = this.buku.map(data => data.id).indexOf(idbuku);
+                let i = this.buku.map(data => data.id).indexOf(id);
                 console.log(i)
                 this.buku.splice(i, 1)
               });
