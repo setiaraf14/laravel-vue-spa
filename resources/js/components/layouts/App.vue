@@ -53,6 +53,15 @@
             </router-link>
           </li>
           <li class="nav-item">
+            <router-link
+              class="nav-link"
+              data-toggle="collapse"
+              :to="{ name: 'dagangan-form' }"
+            >
+              Dagangan
+            </router-link>
+          </li>
+          <li class="nav-item">
             <div class="logout" v-if="token"><button class="btn btn-danger" @click="logout()">Logout</button></div>
           </li>
         </ul>

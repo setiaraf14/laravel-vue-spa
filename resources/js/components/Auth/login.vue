@@ -10,11 +10,11 @@
           <div class="card-body">
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" placeholder="Isi judul buku...">
+                    <input type="text" class="form-control" id="email" placeholder="Isi eamil...">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="text" class="form-control" id="password" placeholder="Isi password buku...">
+                    <input type="text" class="form-control" id="password" placeholder="Isi password...">
                 </div>
                 <button @click="login()" type="button" class="btn btn-primary" >Submit</button>
           </div>

@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BukuController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DaganganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/edit-buku/json/{id}', [BukuController::class, 'editBuku']);
     Route::get('/update-buku/json',  [BukuController::class, 'update']);
     Route::post('/keluar', [AuthController::class, 'keluar']);
+    Route::prefix('dagangan')->group(function () {
+        Route::post('/store-dagangan', [DaganganController::class, 'storeDagangan']);
+    });
 });
 
 Route::post('/signup', [AuthController::class, 'signUp']);

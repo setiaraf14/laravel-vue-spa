@@ -6,6 +6,7 @@ import About from './components/pages/About.vue';
 import Product from './components/pages/Product/index.vue';
 import ProductForm from './components/pages/Product/form.vue';
 import ProductEdit from './components/pages/Product/Edit.vue';
+import DaganganForm from './components/pages/Dagangan/Form.vue';
 import Login from './components/Auth/login.vue';
 
 Vue.use(VueRouter);
@@ -47,6 +48,11 @@ const router = new VueRouter({
             path: '/product/edit',
             name: 'productedit', 
             component: ProductEdit
+        },
+        {
+            path: '/dagangan/form',
+            name: 'dagangan-form', 
+            component: DaganganForm
         },
     ]
 });
